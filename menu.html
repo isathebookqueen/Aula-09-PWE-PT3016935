@@ -42,49 +42,95 @@ body {
   background-color: red;
 }
 
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
+  <!DOCTYPE html>
+  <html>
+  <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
 
-.dropdown-content a {
-  float: none;
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-}
+  .navbar {
+    overflow: hidden;
+    background-color: #333;
+  }
 
-.dropdown-content a:hover {
-  background-color: #ddd;
-}
+  .navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
 
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-</style>
-</head>
-<body style="background-color:white;">
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
 
-<div class="navbar">
-  <a href="index.html">HOME</a>
-  <a href="eventos.html">EVENTOS</a>
-  <a href="contato.html">CONTATO</a>
-  <div class="dropdown">
-    <button class="dropbtn">CURSOS 
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content">
-      <a href="ads.html">Análise e Desenvolvimento de Sistemas</a>
-      <a href="eng.html">Engenharia de Produção</a>
+  .dropdown .dropbtn {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+
+  .navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
+  }
+
+  .dropdown-content {
+    display: none; 
+    background-color: #f9f9f9;
+    position: fixed; /* Position fixed to the viewport */
+    top: 65px; /* Position below the navbar */
+    width: 100%; 
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    left: 0; /* Align to the left edge */
+  }
+
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  </style>
+  </head>
+  <body style="background-color:white;">
+
+  <div class="navbar">
+    <a href="index.html">HOME</a>
+    <a href="eventos.html">EVENTOS</a>
+    <a href="contato.html">CONTATO</a>
+    <div class="dropdown">
+      <button class="dropbtn">CURSOS
+      </button>
+      <div class="dropdown-content">
+        <a href="ads.html">Administração e Desenvolvimento de Sistemas</a>
+        <a href="eng.html">Engenharia de Produção</a>
       </div>
-  <a href="entrar.html">ENTRAR</a>
-  </div> 
-</div>
+    </div>
+    <a href="entrar.html">ENTRAR</a>
+  </div>
+
+  </body>
+  </html>
+</style>
+
 </body>
 </html>
